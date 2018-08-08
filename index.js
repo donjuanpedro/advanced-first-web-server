@@ -4,6 +4,14 @@ let users = require("./state").users;
 const app = express();
 
 
+
+//use this
+app.get ("/users", function(req,res,next){
+    return res.send(users);
+})
+
+//instead of this>>
+
 //hey express, anytime you recieve a request,
 //use this function to decide what to repond with
 app.use(function(req,res,next){
